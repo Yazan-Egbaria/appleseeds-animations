@@ -1,0 +1,33 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 500px;
+    height: 500px;
+    background: rgb(31, 205, 185);
+    position: relative;
+    transition: 0.3s ease all;
+    overflow: hidden;
+}
+
+.container::before {
+    content: '';
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(19, 146, 131);
+    z-index: 1;
+    transition: 1s ease all;
+
+}
+
+.container:hover::before {
+    transform: translateX(-500px);
+}
